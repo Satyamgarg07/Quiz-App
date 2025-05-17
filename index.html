@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <div class="quiz-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h1>Brain Teaser</h1>
+            <p class="intro-text">Test your knowledge with our interactive quiz! Challenge yourself with questions across various categories.</p>
+            <button id="start-btn"><i class="fas fa-play"></i> Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div id="quiz-header">
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <h2 id="question-text">Question text</h2>
+                <div id="quiz-info">
+                    <span id="question-number">Question 1/5</span>
+                    <span id="current-score"><i class="fas fa-star"></i> Score: <span id="running-score">0</span></span>
+                </div>
+            </div>
+            <div id="answer-buttons" class="btn-grid">
+                <!-- Answer buttons will be inserted here -->
+            </div>
+            <button id="next-btn" class="control-btn hidden">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div id="score-screen" class="screen hidden">
+            <div class="result-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h1>Quiz Completed!</h1>
+            <div id="score-container">
+                <div class="score-title">Your Result</div>
+                <div class="score-circle">
+                    <span id="score">0</span>/<span id="total-questions">0</span>
+                </div>
+                <p class="score-message">Great job! Keep learning and improving.</p>
+            </div>
+            <button id="retry-btn" class="control-btn"><i class="fas fa-redo"></i> Retry Quiz</button>
+            <button id="share-btn" class="share-btn"><i class="fas fa-share-alt"></i> Share Result</button>
+        </div>
+    </div>
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
